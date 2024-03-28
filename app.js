@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public')); // Serve static files from 'public' directory
+// app.use(express.static('public')); // Serve static files from 'public' directory
 
 const { setReminder } = require('./bot');
 
