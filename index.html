@@ -1,28 +1,3 @@
-<!-- ﻿<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="utf-8">
-    <title>Automated Reminder System</title> -->
-    <!-- Add later.js and your custom JS file -->
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/later/1.2.0/later.min.js"></script>
-    <script defer="" src="public/later.js"></script> -->
-    <!-- <script defer="" src="app.js"></script>
-    <script defer="" src="bot.js"></script> -->
-
-<!-- </head>
-<body>
-    <h1>Automated Reminder System</h1>
-    <ul id="reminderList"></ul>  -->
-    <!-- Updated part -->
-<!--     <form id="reminderForm">
-        <input type="text" id="reminderMessage" placeholder="Reminder Message" required>
-        <input type="date" id="reminderDate" placeholder="Date (YYYY-MM-DD)" required>
-        <input type="time" id="reminderTime" placeholder="Time (HH:MM)" required>
-        <button id="buttonremind" type="submit">Add Reminder</button>
-    </form>
-
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="schlagball_website.css">
+    <link rel="stylesheet" type="text/css" href="schlagball_dropdown.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   </head>
@@ -43,10 +19,331 @@
       <div class="nav_logo">
         <p>Logo</p>
       </div>
-          <div class="nav__toggle" id="nav-toggle">
+        <div class="nav__toggle" id="nav-toggle">
             <i class="ri-menu-line nav__toggle-menu"></i>
             <i class="ri-close-line nav__toggle-close"></i>
         </div>
+      <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+              <li>
+                  <a href="#" class="nav__link">Mitglied werden</a>
+              </li>
+
+              <!--=============== Trainingszeiten ===============-->
+              <li class="dropdown__item">                      
+                  <div class="nav__link dropdown__button">
+                      Unsere Trainingszeiten<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <div class="dropdown__container">
+                      <div class="dropdown__content">
+                          <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-flashlight-line"></i>
+                              </div>
+                              <!-- <span class="dropdown__title">Kinder</span> -->
+                              
+                              <span class="dropdown__title">Top vorbereitet</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">Vorschule</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Schwimmlernkurs</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link"></a>
+                                  </li>
+                              </ul>
+                          </div>
+
+                          <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-heart-3-line"></i>
+                              </div>
+
+                              <span class="dropdown__title">Sicher werden</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">Seepferdchen</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Slk als Vorrausetzung</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link"></a>
+                                  </li>
+                              </ul>
+                          </div>
+
+                          <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-book-mark-line"></i>
+                              </div>
+
+                              <span class="dropdown__title">Schwimmen als Lifestyle - Clubs</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">Club 3</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Club 4</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Club 5</a>
+                                  </li>
+                                  <p class="dropdown__list_p">Du lernst Kraulschwimmen</p>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Club 6</a>
+                                  </li>
+                              </ul>
+                          </div>
+
+                          <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-file-paper-2-line"></i>
+                              </div>
+
+                              <span class="dropdown__title">Swym Konzept</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">Kinderschutzkonzept</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Durchlauf der Kurse</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Ist dein Kind bereit? - mach den Test</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+
+              <!--=============== Mannschaften ===============-->
+              <li class="dropdown__item">
+                  <div class="nav__link dropdown__button">
+                      Mannschaften<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <div class="dropdown__container">
+                      <div class="dropdown__content">
+                          <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-code-line"></i>
+                              </div>
+
+                              <span class="dropdown__title">Neu lernen - Beginner</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">8 Wochen Kurse</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Schwimmen mit Trainer</a>
+                                  </li>
+                              </ul>
+                          </div>
+
+                          <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-pen-nib-line"></i>
+                              </div>
+
+                              <span class="dropdown__title">Fortgeschritten</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">Frei Schwimmen gehen</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Schwimmen mit TrainerIn</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Aquaftiness</a>
+                                  </li>
+                              </ul>
+                          </div>
+
+                          <!-- <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-apps-2-line"></i>
+                              </div>
+
+                              <span class="dropdown__title">Others</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">Recent blogs</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Tutorial videos</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Webinar</a>
+                                  </li>
+                              </ul>
+                          </div> -->
+                      </div>
+                  </div>
+              </li>
+
+              <!-- <li>
+                  <a href="#" class="nav__link">Preise</a>
+              </li> -->
+
+              <!--===============How to schlagball ===============-->
+              <li class="dropdown__item">                        
+                  <div class="nav__link dropdown__button">
+                      How to Schlagball <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <div class="dropdown__container">
+                      <div class="dropdown__content">
+                          <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-community-line"></i>
+                              </div>
+
+                              <span class="dropdown__title">About us</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">About us</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Support</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Contact us</a>
+                                  </li>
+                              </ul>
+                          </div>
+
+                          <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-shield-line"></i>
+                              </div>
+
+                              <span class="dropdown__title">Safety and quality</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">Cookie settings</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Privacy Policy</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <!--=========preis Dropdown===========-->
+              <li class="dropdown__item">                        
+                <div class="nav__link dropdown__button">
+                    Equipment - Bälle/Keulen <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <div class="dropdown__container">
+                    <div class="dropdown__content">
+                        <div class="dropdown__group">
+                            <div class="dropdown__icon">
+                                <i class="ri-community-line"></i>
+                            </div>
+
+                            <span class="dropdown__title">About us</span>
+
+                            <ul class="dropdown__list">
+                                <li>
+                                    <a href="#" class="dropdown__link">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown__link">Support</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown__link">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown__group">
+                            <div class="dropdown__icon">
+                                <i class="ri-shield-line"></i>
+                            </div>
+
+                            <span class="dropdown__title">Safety and quality</span>
+
+                            <ul class="dropdown__list">
+                                <li>
+                                    <a href="#" class="dropdown__link">Cookie settings</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown__link">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+              <li class="dropdown__item">                        
+                  <div class="nav__link dropdown__button">
+                      Preise <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <div class="dropdown__container">
+                      <div class="dropdown__content">
+                          <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-community-line"></i>
+                              </div>
+
+                              <span class="dropdown__title">About us</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">About us</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Support</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Contact us</a>
+                                  </li>
+                              </ul>
+                          </div>
+
+                          <div class="dropdown__group">
+                              <div class="dropdown__icon">
+                                  <i class="ri-shield-line"></i>
+                              </div>
+
+                              <span class="dropdown__title">Safety and quality</span>
+
+                              <ul class="dropdown__list">
+                                  <li>
+                                      <a href="#" class="dropdown__link">Cookie settings</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="dropdown__link">Privacy Policy</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <!-- Preis dropdown ende -->
+          </ul>
+      <div class="social_media">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a> 
+      </div>
     </nav>
 
   </header>
@@ -54,20 +351,28 @@
 
 
     <main>
-        <img  src="cassio_wurf.jpg" alt="Large Picture">
+        <img  src="bilder/cassio_wurf.jpg" alt="Large Picture">
         <div class="main_title">
               <h1>Schlagball</h1>
+              <h2>Verein</h2>
               <h1> Winterhude</h1>
         </div>
    
         
 
-        <div id="training" class="trainingszeiten">
+        <div class="trainingszeiten">
           <h4>Trainingszeiten</h4>
             <ul>
-              <li id="monday">Montags - 17-20 Uhr<br></li>
-              <li id="friday">Freitags - 14-16 Uhr <br> </li>
-              <li id="sunday">Sonntag - 11-13 Uhr<br></li>
+              <li id="monday">
+                <p>Montags - 17-20 Uhr</p>
+              </li>
+              <p class="training_hide">Alter: 12-29</p>
+              <li id="friday">
+                <p>Freitags - 14-16 Uhr</p>
+              </li>
+              <li id="sunday">
+                <p>Sonntag - 11-13 Uhr</p></p>
+              </li>
             </ul>
         </div>
         
@@ -88,7 +393,7 @@
       <div class="werbeVid">
         <video src="videos/schlagball.mp4" controls></video>
       </div>
-      <img src="spielfeld-lg.jpg" alt="spielfeld">
+      <img src="bilder\spielfeld-lg.jpg" alt="spielfeld">
       <p><h4>Schlagball</h4> kombiniert Elemente aus Baseball, Brennball und Völkerball. Zwei Teams 
         wechseln sich im Schlagrecht ab. Die Spieler des schlagenden Teams schlagen den Ball ins
          Spielfeld und laufen durch das Feld zu einem Mal und zurück, um Punkte zu sammeln. Das andere 

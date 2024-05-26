@@ -1,8 +1,17 @@
-*{
-
-  box-sizing: border-box;
-  font-size: 16px;
-}
+  /*=============== BASE ===============*/
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color-header);
+  }
+   
 
 :root{
 --z-index-top-ebene: 3;
@@ -18,7 +27,9 @@ width: 100%;
   /* border: solid 3px orange; */
   box-sizing: border-box;
 }
-
+p{
+  color: black;
+}
 header {
   z-index: 999;
   position: fixed;
@@ -122,21 +133,12 @@ left: 50%;
 transform: translateX(-50%);
 font-weight: 700;
 color: #fff;
-text-shadow: 0 0 3px rgba(255, 255, 255, 0.7), 
-0 0 6px rgba(255, 255, 255, 0.7), 
-0 0 9px rgba(255, 255, 255, 0.7), 
-0 0 12px rgba(255, 255, 255, 0.7), 
-0 0 15px rgba(255, 255, 255, 0.7);
-/* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); */
-/* text-shadow: 0 0 5px #ffa500, 
-             0 0 10px #ff8c00, 
-             0 0 20px #ff7f50, 
-             0 0 40px #ff6347, 
-             0 0 80px #ff4500, 
-             0 0 90px #ff4500, 
-             0 0 100px #ff4500, 
-             0 0 150px #ff4500; */
-/* border: solid black 4px; */
+text-shadow: 0 0 3px rgba(255, 255, 255, 0.3), 
+0 0 6px rgba(255, 255, 255, 0.3), 
+0 0 9px rgba(255, 255, 255, 0.3), 
+0 0 12px rgba(255, 255, 255, 0.3), 
+0 0 15px rgba(255, 255, 255, 0.3);
+
 text-align: center;
 }
 .main_title h1:nth-child(1){
@@ -144,12 +146,36 @@ margin: 0;
 color: rgb(255, 102, 0);
 }
 
-.main_title h1:nth-child(2){
+.main_title h2{
+  margin: 0;
+color: rgb(214, 26, 173);
+}
+.main_title h1{
 margin: 0;
 color: rgb(0, 153, 255);
 }
 
+.social_media{
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  transform: translateX(-50%);
 
+}
+.social_media a{
+  padding: 0.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social_media i{
+  color: red;
+  font-size: 1.5rem;
+}
+
+/* Trainingszeiten */
 .trainingszeiten{
 position: absolute;
 padding-left: 0.5rem;
@@ -165,6 +191,7 @@ box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
 color: black;
 padding-top: 0;
 margin: 0;
+width: 75%;
 transition: width 0.7s ease-in-out, height 0.7s ease-in-out, padding 0.7s ease-in-out, border-radius 0.7s ease-in-out, background-color 0.7s ease-in-out, box-shadow 0.7s ease-in-out, color 0.7s ease-in-out, margin 0.7s ease-in-out, top 0.7s ease-in-out, right 0.7s ease-in-out, transform 0.7s ease-in-out;
 }
 
@@ -189,10 +216,19 @@ margin: 0.5rem;
 }
 .trainingszeiten p{
 font-size: 1.125rem;
-margin: 0.25rem;
+/* margin: 0.25rem; */
 padding: 0;
 }
 
+.training_hide{
+  opacity: 0;
+  height: 0rem;
+
+  transition: opacity 0.7s ease-in-out, height 0.7s ease-in-out, width 0.7s ease-in-out;
+}
+
+
+/* MITGLIED  */
 .mitglied {
   transition: all 0.7s ease-in-out;
   z-index: var(--z-index-middle-ebene);
@@ -206,7 +242,7 @@ transform: translate(-50%, -2rem);
 display: flex;
 align-items: center;
 justify-content: center;
-width: 80%;
+width: 70%;
 border-radius: 1rem;
 border: none;
 /* background-color: rgb(114, 113, 113, 0.5); */
@@ -312,12 +348,12 @@ margin: 0;
 font-size: 1.125rem;
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 
-
 }
 
 .whatIs p{
 margin: 0;
 font-size: 1.125rem;
+
 }
 /* .whatIs svg{
 margin: 0;
