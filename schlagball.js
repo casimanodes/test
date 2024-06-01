@@ -10,7 +10,7 @@ window.addEventListener('scroll', function() {
       img.style.borderRadius = '0.5rem';
       imgSizeChanged = true;
       // alert("done")
-      mitglied.style.bottom= 'calc(0% - 3.5rem)';
+      mitglied.style.bottom = 'calc(0% - 1.25rem)';
     }
   } else {
     if (imgSizeChanged) {
@@ -28,36 +28,75 @@ const monday = document.getElementById('monday');
 const friday = document.getElementById('friday');
 const sunday = document.getElementById('sunday');
 
-const originalMonday = monday.innerHTML;
-const originalFriday = friday.innerHTML;
-const originalSunday = sunday.innerHTML;
 
-const training_hide = document.querySelector('.training_hide');
+
+const training_hide = document.querySelectorAll('.training_hide');
 let isAddressVisible = false;
 const trainingszeiten = document.querySelector('.trainingszeiten');
-document.querySelector('.trainingszeiten').addEventListener('click', function() {
+trainingszeiten.addEventListener('click', function() {
     if(!isAddressVisible){
-        // monday.innerHTML = originalMonday + ' adresse';
-        // friday.innerHTML = originalFriday + ' adresse';
-        // sunday.innerHTML = originalSunday + ' adresse';
         isAddressVisible = true;
-        training_hide.style.height = "1rem";
-        training_hide.style.opacity = "1";
+        training_hide.forEach(element => {
+          element.style.height = "1rem";
+          element.style.opacity = "1";
+        });
         trainingszeiten.style.width = "80%";
     } else {
-        monday.innerHTML = originalMonday;
-        friday.innerHTML = originalFriday;
-        sunday.innerHTML = originalSunday;
         isAddressVisible = false;
-        training_hide.style.height = "";
-        training_hide.style.opacity = "";
+        training_hide.forEach(element => {
+          element.style.height = "";
+          element.style.opacity = "";
+        });
         trainingszeiten.style.width = "";
-
     }
 });
 
 
-// DROPDOWM MENU 
+// CHATBOT
+const chatbot = document.querySelector('.chatbot');
+const chatInput = document.getElementById('chatInput');
+const chatClose = document.querySelector('.close');
+const chatBotText = document.querySelector(".chatbotText");
+const chatbotTitle = document.querySelector('.chatbot_title');
+document.querySelector('.chatbot').addEventListener('click', function() {
+  chatbot.classList.add('expanded');
+  chatInput.style.display = "flex";
+  chatClose.style.pointerEvents = "all";
+  chatClose.style.opacity = "1";
+  chatClose.style.zIndex = "999"; 
+  chatBotText.style.visibility = "visible";
+  chatbotTitle.style.transform = "rotate(0deg)";
+  // chatBotText.scrollTop = chatBotText.scrollHeight;
+});
+
+function closeBot() {
+  chatbot.classList.remove('expanded');
+  chatInput.style.display = "none";
+  chatClose.style.zIndex = "";
+  chatClose.style.pointerEvents = "none";
+  chatBotText.style.visibility = "hidden";
+  chatbotTitle.style.transform = "";
+
+  setTimeout(function() {
+    chatClose.style.opacity = "0";
+  }, 100);
+}
+
+
+document.addEventListener('click', function(e) {
+  // Überprüfen Sie, ob das geklickte Element nicht der Chatbot ist
+  if (!e.target.closest('.chatbot')) {
+    closeBot();
+  }
+});
+document.querySelector('.close').addEventListener('click', function() {
+  closeBot();
+});
+
+
+
+
+
 
 
 
