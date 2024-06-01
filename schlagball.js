@@ -58,6 +58,8 @@ const chatInput = document.getElementById('chatInput');
 const chatClose = document.querySelector('.close');
 const chatBotText = document.querySelector(".chatbotText");
 const chatbotTitle = document.querySelector('.chatbot_title');
+const inputField = document.querySelector('.input_send');
+
 document.querySelector('.chatbot').addEventListener('click', function() {
   chatbot.classList.add('expanded');
   chatInput.style.display = "flex";
@@ -66,6 +68,7 @@ document.querySelector('.chatbot').addEventListener('click', function() {
   chatClose.style.zIndex = "999"; 
   chatBotText.style.visibility = "visible";
   chatbotTitle.style.transform = "rotate(0deg)";
+  inputField.style.display = "flex";
   // chatBotText.scrollTop = chatBotText.scrollHeight;
 });
 
@@ -76,6 +79,7 @@ function closeBot() {
   chatClose.style.pointerEvents = "none";
   chatBotText.style.visibility = "hidden";
   chatbotTitle.style.transform = "";
+  inputField.style.display = "";
 
   setTimeout(function() {
     chatClose.style.opacity = "0";

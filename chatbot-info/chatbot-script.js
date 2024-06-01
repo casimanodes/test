@@ -1,9 +1,17 @@
 document.getElementById('chatInput').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' || send()) {
         alert("Antworten kommen später. Das ganze muss erst auf server hochgeladne und verknüpft werden.")
         sendMessage();
     }
 });
+
+function send(){
+const sendButton = document.getElementById('send');
+sendButton.addEventListener('click', function() {
+    sendMessage();
+});
+}
+
 
 // funktoin um nachrichten im chatbot zu zeigen
 function displayMessage(message, className) {
@@ -44,7 +52,7 @@ function sendMessage() {
 
 
 // Funktion um Nachrichten zu empfangen
-
+const data = { message: 'Hallo' };
 function fetchData() {
     fetch('http://localhost:3000/retrieve-message')
         .then(response => response.json())
