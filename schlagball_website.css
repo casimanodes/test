@@ -1,18 +1,10 @@
-  /*=============== BASE ===============*/
   * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
   }
-  
-  body {
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
-    color: var(--text-color-header);
-  }
-   
 
+   
 :root{
 --z-index-top-ebene: 3;
 --z-index-middle-ebene: 2;
@@ -29,46 +21,6 @@ width: 100%;
 }
 p{
   color: black;
-}
-header {
-  z-index: 999;
-  position: fixed;
-height: 3.5rem;
-width: 100%;
-background-color: rgba(255, 255, 255);
-box-shadow: 0 4px 2px 0px rgba(0, 0, 0, 0.4);
-/* filter: blur(5px); */
-
-}
-header nav{
-height: 100%;
-width: 100%;
-padding-left: 5%;
-padding-right: 5%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-/* 
-.header_element{
-position: absolute;
-top: 1rem;
-right: 1rem;
-height: 2rem;
-width: 2rem;
-box-shadow: inset;
-z-index: var(--z-index-top-ebene);
-background-color: #fff;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 10%;
-} */
-
-header p{
-height: auto;
-width: auto;
-font-weight: 800;
 }
 
 
@@ -105,8 +57,7 @@ margin: 0;
 transition: padding 0.5s ease, border-radius 0.5s ease;
 border-radius: 0;
 position: relative;
-background-color: rgba(0, 0, 0, 0.1);
-
+/* background-color: rgba(0, 0, 0, 0.9); */
 }
 
 main img {
@@ -122,6 +73,7 @@ object-fit: cover;
 /* transform: translateX(-22%); */
 filter: blurr(5px) ;
 transition: height 0.7s ease, width 0.7s ease;
+z-index: 1;
 }
 
 
@@ -129,32 +81,77 @@ transition: height 0.7s ease, width 0.7s ease;
   margin-top: 0.25rem;
 position: absolute;
 top: 10%;
-/* left: 50%;
-transform: translateX(-50%); */
-font-weight: 700;
 color: #fff;
-/* text-shadow: 0 0 3px rgba(255, 255, 255, 0.3), 
-0 0 6px rgba(255, 255, 255, 0.3), 
-0 0 9px rgba(255, 255, 255, 0.3), 
-0 0 12px rgba(255, 255, 255, 0.3), 
-0 0 15px rgba(255, 255, 255, 0.3); */
+    /* --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2); */
+    /* --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.3); */
+    /* --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.1); */
+    /* --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1); */
+    /* --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1); */
 width: 100%;
 text-align: center;
 margin: 0;
+z-index: var(--z-index-top-ebene);
 }
+.inline{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.inline h2{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+/* .inline h2:nth-child(2){ */
+  /* background: linear-gradient(90deg, rgb(233, 103, 103), rgb(232, 178, 84), rgb(30, 202, 221)); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+/* } */
+
+
 .main_title h1, 
-.main_title h3{
-  text-shadow: 0px 0px 10px black;
+.main_title h2{
+  unicode-bidi: isolate;
+  text-shadow: 0px 1px 30px rgba(0, 0, 0, 0.7);
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("cassio_wurf.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+transition: height 0.7s ease, width 0.7s ease;
+  border: 0;
+}
+.img_background{
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+
 }
 .social_media{
+  display: block;
   position: absolute;
   bottom: 1rem;
   left: 50%;
   display: flex;
   flex-direction: row;
   transform: translateX(-50%);
-
 }
+@media all and (min-width: 1118px) {
+  .social_media{
+    display: none;
+  }
+}
+
 .social_media a{
   padding: 0.125rem;
   display: flex;
@@ -234,7 +231,7 @@ transition: height 0.7s ease-in-out, opacity 0.7s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
+  width: 75%;
   border-radius: 1rem;
   border: none;
   /* background-color: rgb(114, 113, 113, 0.5); */
@@ -393,7 +390,9 @@ margin: 0;
   z-index: var(--z-index-top-ebene);
   transition: all 0.4s ease-in-out;
 }
-
+.chatbot p .chatbot_title{
+  color: white;
+}
 .expanded {
   width: calc(100% - 0.5rem);
   height: 70%;
@@ -493,3 +492,7 @@ margin: 0;
   text-align: left;
   background-color: rgb(9, 140, 184);
 }
+
+
+
+
