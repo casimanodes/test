@@ -17,7 +17,8 @@
   --text-color: hsl(240, 4%, 5%);
   --text-color-header: hsl(0, 0%, 100%);
   --body-color: hsl(220, 100%, 99%);
-  --header-color: rgb(255,255,255,0.5);
+  /* --header-color: rgb(255,255,255,0.5); */
+  --header-color: rgb(255,255,255,1);
   
 
   --background-color-transition: background-color 0.9s ease;
@@ -104,7 +105,9 @@ header {
   height: 4rem;
   width: 6rem;
 }
-
+.nav__logo a{
+  color: black;
+}
 /* .nav__logo i {
   font-size: 1.25rem;
 }
@@ -140,7 +143,7 @@ header {
     width: 100%;
     height: calc(100svh - 3.5rem);
     overflow: auto;
-    padding-block: 1.5rem 4rem;
+    padding-block: 0.25rem 4rem;
     pointer-events: none;
     opacity: 0;
     transition: top 0.4s, opacity 0.3s;
@@ -209,7 +212,7 @@ header {
   row-gap: 0.5rem;
 }
 .dropdown__group:first-child {
-  margin-top: 1.25rem;
+  margin-top: 0.25rem;
 }
 .dropdown__group:last-child {
   margin-bottom: 1.25rem;

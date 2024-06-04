@@ -8,8 +8,8 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="schlagball_website.css">
-    <link rel="stylesheet" type="text/css" href="schlagball_dropdown.css">
+    <link rel="stylesheet" type="text/css" href="css/schlagball_website.css">
+    <link rel="stylesheet" type="text/css" href="css/schlagball_dropdown.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   </head>
@@ -19,7 +19,7 @@
         <nav class="nav container">
             <div class="nav__data">
                     <div class="nav__logo">
-                        Logo
+                        <a href="index.html">Logo</a>
                     </div>
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line nav__toggle-menu"></i>
@@ -31,17 +31,55 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li>
-                        <a href="https://www.swym-hamburg.de/kursuebersicht.html#/" class="nav__link">Mitglied werden</a>
+                        <a href="public\mitglieder.html" class="nav__link">Mitglied werden</a>
                     </li>
-
-                    <!--=============== Kinder 1 ===============-->
+                    <li>
+                        <a href="#" class="nav__link">Blog</a>
+                    </li>
+                    <!--=============== Trainingszeiten ===============-->
                     <li class="dropdown__item">                      
                         <div class="nav__link dropdown__button">
                             Trainingszeiten
                         </div>
                     </li>
+                    <!-- Trainingspläne -->
+                    <li class="dropdown__item">                      
+                        <a href="public\trainingspläne.html" class="nav__link">Trainingspläne</a>
 
-                    <!--=============== Erwachsene ===============-->
+                    </li>
+                    <!-- Mannschaften  -->
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Unsere Mannschaften<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-code-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Mannschaften</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Winterhude 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Winterhude 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Winterhude 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+
+                            </div>
+                        </div>
+                    </li>
+                    <!--=============== Schlagball erklärung ===============-->
                     <li class="dropdown__item">
                         <div class="nav__link dropdown__button">
                             Schlagball - erklärt<i class="ri-arrow-down-s-line dropdown__arrow"></i>
@@ -65,7 +103,31 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-code-line"></i>
+                                    </div>
 
+                                    <span class="dropdown__title">Technik erklärung</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Werfen</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Schlagen</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Fangen</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Taktik</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Aufstellung</a>
+                                        </li>
+                                    </ul>
+                                </div>
 
                             </div>
                         </div>
@@ -127,26 +189,15 @@
     <main>
         <div class="overlay">
             <div class="img_background"></div>
-            <!-- <img  src="cassio_wurf.jpg" alt="Large Picture"> -->
         </div>
+
+    <div class="relative_container">
+
         <div class="main_title">
               <div class="inline"><h2>Schlagball </h2><h2> Verein</h2></div>
               <h1> Winterhude</h1>
         </div>
 
-        <!-- CHATBOT -->  
-
-        <div class="chatbot">
-           <p class="chatbot_title">Chatbot</p>
-            <div class="chatbotText"></div>
-            <div class="input_send">
-                <input type="text" id="chatInput" placeholder="Frage gerne nach...">
-                <button id="send">Senden</button>
-            </div>
-        </div>
-        <div class="close">
-            <h1>x</h1>
-        </div>
 
         <div class="trainingszeiten">
           <h4>Trainingszeiten</h4>
@@ -169,24 +220,39 @@
 
             </ul>
         </div>
-        
-        <button class="mitglied">
-          Mitglied werden
-        </button>
 
+        <a class="mitglied" href="public/mitglieder.html">
+            <button >
+                Mitglied werden
+            </button>
+        </a>
         <div class="whatIs">
           <!-- <p>Was ist eigentlich Schlagball?</p> -->
           <!-- <p>arrow down - svg </p> -->
         </div>
-
+    </div>
     </main>
-    
+    <!-- chatbot  -->
+    <div class="chatbot">
+        <p class="chatbot_title">Chatbot</p>
+         <div class="chatbotText"></div>
+         <div class="input_send">
+             <input type="text" id="chatInput" placeholder="Frage gerne nach...">
+             <button id="send">Senden</button>
+         </div>
+     </div>
+     <div class="close">
+         <h1>x</h1>
+     </div>
+
+
+
     <div class="second_vh">
       <h2>Der Kreativste Sport der Welt</h2>
       <div class="werbeVid">
         <video src="videos/schlagball.mp4" controls></video>
       </div>
-      <img src="spielfeld-lg.jpg" alt="spielfeld">
+      <img src="bilder/spielfeld-lg.jpg" alt="spielfeld">
       <p><h4>Schlagball</h4> kombiniert Elemente aus Baseball, Brennball und Völkerball. Zwei Teams 
         wechseln sich im Schlagrecht ab. Die Spieler des schlagenden Teams schlagen den Ball ins
          Spielfeld und laufen durch das Feld zu einem Mal und zurück, um Punkte zu sammeln. Das andere 
@@ -195,7 +261,10 @@
         </p>
     </div>
 </body>
-<script src="schlagball.js"></script>
+<script src="js/schlagball.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/trainingszeiten.js"></script>
+<script src="js/chatbot.js"></script>
 <script src="chatbot-info\chatbot-script.js"></script>
 </html>
 
