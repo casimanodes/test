@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/schlagball_website.css">
     <link rel="stylesheet" type="text/css" href="../css/trainingspläne.css">
     <link rel="stylesheet" type="text/css" href="../css/schlagball_dropdown.css">
+    <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   </head>
@@ -187,13 +188,14 @@
 
     <!-- Content start  -->
   <main>
-    <div class="overlay">
+    <!-- <div class="overlay">
         <div class="img_background"></div>
-    </div>
+    </div> -->
     <div class="main_title">
         <h1>Wir Coachen</h1>
         <h2>Dich!</h2>
     </div>
+    <!-- Produkt 1  -->
     <div class="coaching">
         <div class="inline">
             <div class="sell_img">
@@ -211,7 +213,51 @@
             Kaufen
         </button>
     </div>
+    <!-- produkt 2  -->
+    <div class="coaching">
+        <div class="inline">
+            <div class="sell_img">
+                <img src="../bilder/cassio_wurf.jpg" alt="verkaufs Bild">
+            </div>
+            <div class="reverse_inline">
+                <p class="sell_title">Fitness  Trainingsplan </p>
+                <p class="sell_price">30 €</p>
+            </div>
+            <div class="produkt_beschreibung"><p>></p></div>
+        </div>
+        <div class="beschreibung"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, voluptatibus!</p></div>
+
+        <button class="checkout">
+            Kaufen
+        </button>
+    </div>
+
     </main>
+
+
+    <h3>Spieler Winterhude 1</h3>
+    <div class="wrapper">
+        <div class="itemLeft item1"><a href="#">Cassio</a></div>
+        <div class="itemLeft item2"><a href="#">Mateo</a></div>
+        <div class="itemLeft item3"><a href="#">Max</a></div>
+        <div class="itemLeft item4"><a href="#">Lenni</a></div>
+        <div class="itemLeft item5"><a href="#">Till</a></div>
+        <div class="itemLeft item6"><a href="#">Kathi</a></div>
+        <div class="itemLeft item7"><a href="#">Ove</a></div>
+        <div class="itemLeft item8"><a href="#">Ceci</a></div>
+      </div>
+      <div class="wrapper">
+        <div class="itemRight item1"></div>
+        <div class="itemRight item2"></div>
+        <div class="itemRight item3"></div>
+        <div class="itemRight item4"></div>
+        <div class="itemRight item5"></div>
+        <div class="itemRight item6"></div>
+        <div class="itemRight item7"></div>
+        <div class="itemRight item8"></div>
+      </div>
+
+
 
 
 <div class="chatbot">
@@ -227,18 +273,21 @@
 </div>
 <script>
 
-const beschreibung_öffnen = document.querySelector('.produkt_beschreibung');
-const beschreibung = document.querySelector('.beschreibung');
-var opened = false;
-    beschreibung_öffnen.addEventListener('click', function() {
+const beschreibung_öffnen = document.querySelectorAll('.produkt_beschreibung');
+const beschreibungen = document.querySelectorAll('.beschreibung');
+
+beschreibung_öffnen.forEach((öffnen, index) => {
+    let opened = false;
+    öffnen.addEventListener('click', function() {
         if(!opened){
-            beschreibung.style.display = 'block';
+            beschreibungen[index].style.display = 'block';
             opened = true;
         }else{
-            beschreibung.style.display = 'none';
+            beschreibungen[index].style.display = 'none';
             opened = false;
         }
     });
+});
     </script>
   <script src="../js/dropdown.js"></script>
   <script src="../js/chatbot.js"></script>

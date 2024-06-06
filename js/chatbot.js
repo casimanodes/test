@@ -4,9 +4,9 @@ const chatbot = document.querySelector('.chatbot');
 const chatInput = document.getElementById('chatInput');
 const chatClose = document.querySelector('.close');
 const chatBotText = document.querySelector(".chatbotText");
-const chatbotTitle = document.querySelector('.chatbot_title');
 const inputField = document.querySelector('.input_send');
-
+const pos_spinner = document.querySelector('.pos_spinner');
+const chatbot_svg = document.querySelector('.chatbot_svg');
 document.querySelector('.chatbot').addEventListener('click', function() {
   chatbot.classList.add('expanded');
   chatInput.style.display = "flex";
@@ -14,8 +14,9 @@ document.querySelector('.chatbot').addEventListener('click', function() {
   chatClose.style.opacity = "1";
   chatClose.style.zIndex = "999"; 
   chatBotText.style.visibility = "visible";
-  chatbotTitle.style.transform = "rotate(0deg)";
   inputField.style.display = "flex";
+  chatbot_svg.style.display = "none";
+  // pos_spinner.style.display = "block";
   // chatBotText.scrollTop = chatBotText.scrollHeight;
 });
 
@@ -25,12 +26,14 @@ function closeBot() {
   chatClose.style.zIndex = "";
   chatClose.style.pointerEvents = "none";
   chatBotText.style.visibility = "hidden";
-  chatbotTitle.style.transform = "";
   inputField.style.display = "";
+  // pos_spinner.style.display = "";
 
   setTimeout(function() {
     chatClose.style.opacity = "0";
-  }, 100);
+  chatbot_svg.style.display = "";
+
+  }, 300);
 }
 
 

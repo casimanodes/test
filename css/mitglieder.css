@@ -75,6 +75,7 @@ form{
     border: solid lightblue 2px;
     border-radius: 0.5rem;
     font-size: 1.125rem;
+    background-color: darkgrey;
 }
 /* form:last-child{
     /* border: solid 3px red;

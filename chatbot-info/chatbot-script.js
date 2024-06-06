@@ -2,6 +2,8 @@ document.getElementById('chatInput').addEventListener('keypress', function (e) {
     if (e.key === 'Enter' || send()) {
         alert("Antworten kommen später. Das ganze muss erst auf server hochgeladne und verknüpft werden.")
         sendMessage();
+        pos_spinner.style.display = "block";
+
     }
 });
 
@@ -9,6 +11,8 @@ function send(){
 const sendButton = document.getElementById('send');
 sendButton.addEventListener('click', function() {
     sendMessage();
+    pos_spinner.style.display = "block";
+
 });
 }
 
@@ -46,6 +50,8 @@ function sendMessage() {
     .catch(error => {
         console.error('Error:', error);
         displayMessage('Error: Could not retrieve the response.', 'bot-message');
+
+        pos_spinner.style.display = "";
     });
 }
 
@@ -59,6 +65,7 @@ function fetchData() {
         .then(data => {
             console.log(data);
             displayMessage(data.message, 'bot-message');
+            pos_spinner.style.display = "";
         })
         .catch(error => {
             console.error('Error:', error);
@@ -67,6 +74,7 @@ function fetchData() {
 
 
 // muss noch angepasst werden sodass die funktion ausgeführt wird wenn die nachricht gesendet wird
+// triggert das nachrichten posten 
  document.querySelector('.chatbot').addEventListener('click', function() {
         fetchData();
  });
