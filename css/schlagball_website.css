@@ -106,7 +106,7 @@ main img {
   height: calc(100svh - 3.5rem);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .main_title{
   margin-top: 0.25rem;
@@ -184,8 +184,9 @@ box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
   /* border: solid black 4px; */
 color: black;
 padding-top: 0;
-margin-left: auto;
-margin-right: 0.5rem;
+top: 20%;
+margin-top: 0.5rem;
+margin-left: 0.5rem;
 transition: width 0.7s ease-in-out, height 0.7s ease-in-out, padding 0.7s ease-in-out, border-radius 0.7s ease-in-out, background-color 0.7s ease-in-out, box-shadow 0.7s ease-in-out, color 0.7s ease-in-out, margin 0.7s ease-in-out, top 0.7s ease-in-out, right 0.7s ease-in-out, transform 0.7s ease-in-out;
 }
 
@@ -224,13 +225,13 @@ transition: height 0.7s ease-in-out, opacity 0.7s ease-in-out;
 
 /* MITGLIED  */
 .mitglied{
-  visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  bottom: 0rem;
-  left: 0rem;
+  top: 0rem;
+  left: 50%;
+  transform: translate(-50%);
   z-index: var(--z-index-top-ebene);
   width: 75%;
   height: 3rem;
@@ -353,35 +354,37 @@ top: 0;
 left: 0;
 }
 
-.whatIs{
+a.whatIs{
 position: absolute;
 display: flex;
 justify-content: center;
 align-items: center;  
+flex-direction: column;
 /* flex-direction: column; */
 bottom: 0%;
-left: 50%;
+/* left: 25%; */
 transform: translate(-50%);
 height: auto;
+width: 100%;
 margin: 0;
 /* background: linear-gradient(to top, white, rgba(255, 255, 255, 0.3)); */
 /* background-color: rgb(255, 255, 255, 0.5); */
-font-size: 1.125rem;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 animation: bounce 2s infinite;
+text-align: center;
 }
 
 .whatIs p{
 margin: 0;
 font-size: 1.125rem;
-
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+color: #fff;
 }
 .arrow_down{
-  position: absolute;
+  position: relative;
   bottom: 0;
-  left: calc(50% - 1rem);
+  /* left: calc(50% - 1rem); */
   margin-bottom: 0.25rem;
-  animation: bounce 2s infinite;
+  color: #fff;
 }
 
 
@@ -414,13 +417,15 @@ font-size: 1.125rem;
   align-items: center;
   justify-content: center; */
 }
-.chatbot_svg{
+svg.chatbot_svg{
   color: black;
-  position: relative;
-  left: 25%;
-  top: 25%;
-  /* transform: translate(-50%, -50%); */
-  scale: 2.5;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  height: 48px;
+  width: 48px;
+  transform: translate(-50%, -50%);
+  /* scale: 2.5; */
 
 }
 .expanded {
