@@ -106,4 +106,3 @@ function sendMessage() {
         document.querySelector('.pos_spinner').style.display = "none";
     });
 }
-

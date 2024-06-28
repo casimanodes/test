@@ -61,7 +61,6 @@
 // server.listen(port, () => {
 //     console.log(`Server running at http://localhost:${port}`);
 // });
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -111,11 +110,6 @@ app.post('/api/chatbot', async (req, res) => {
         console.error('Error:', error.response ? error.response.data : error.message);
         res.status(500).send('Error communicating with OpenAI');
     }
-});
-
-// Endpoint to retrieve the last response message
-app.get('/api/retrieve-message', (req, res) => {
-    res.json({ message: responseMessage });
 });
 
 // Export the app as a Vercel serverless function
