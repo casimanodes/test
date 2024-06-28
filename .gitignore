@@ -4,3 +4,4 @@
 /chatbot-info/package.json
 .hintrc
 node_modules
+vercel.json
