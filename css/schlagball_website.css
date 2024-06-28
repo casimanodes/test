@@ -71,7 +71,7 @@ position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../../schlagball-react/src/components/images/cassio_wurf.jpg");
+  background-image: url("../bilder/cassio_wurf.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
