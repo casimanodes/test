@@ -79,7 +79,7 @@ function sendMessage() {
     const chatInput = document.getElementById('chatInput');
     const userMessage = chatInput.value;
     if (userMessage.trim() === '') return;
-
+    console.log("userMessage: ", userMessage);
     displayMessage(userMessage, 'user-message');
     chatInput.value = '';
 
