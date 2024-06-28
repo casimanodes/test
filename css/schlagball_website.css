@@ -4,7 +4,9 @@
     margin: 0;
   }
 
-   
+  html {
+    color-scheme: light;
+}
 :root{
 --z-index-top-ebene: 3;
 --z-index-middle-ebene: 2;
