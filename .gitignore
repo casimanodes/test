@@ -2,3 +2,4 @@
 /chatbot-info/.env
 /chatbot-info/package-lock.json
 /chatbot-info/package.json
+.hintrc
