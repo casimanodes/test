@@ -154,11 +154,7 @@ main img {
   flex-direction: row;
   transform: translateX(-50%);
 }
-@media all and (min-width: 1118px) {
-  .social_media{
-    display: none;
-  }
-}
+
 
 .social_media a{
   padding: 0.125rem;
