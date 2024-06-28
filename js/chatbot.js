@@ -7,6 +7,8 @@ const chatBotText = document.querySelector(".chatbotText");
 const inputField = document.querySelector('.input_send');
 const pos_spinner = document.querySelector('.pos_spinner');
 const chatbot_svg = document.querySelector('.chatbot_svg');
+const chatbotTitle = document.querySelector('.chatbotTitle');
+
 document.querySelector('.chatbot').addEventListener('click', function() {
   chatbot.classList.add('expanded');
   chatInput.style.display = "flex";
@@ -16,6 +18,7 @@ document.querySelector('.chatbot').addEventListener('click', function() {
   chatBotText.style.visibility = "visible";
   inputField.style.display = "flex";
   chatbot_svg.style.display = "none";
+  chatbotTitle.style.display = "flex";
   // pos_spinner.style.display = "block";
   // chatBotText.scrollTop = chatBotText.scrollHeight;
 });
@@ -28,6 +31,7 @@ function closeBot() {
   chatBotText.style.visibility = "hidden";
   inputField.style.display = "";
   // pos_spinner.style.display = "";
+  chatbotTitle.style.display = "none";
 
   setTimeout(function() {
     chatClose.style.opacity = "0";

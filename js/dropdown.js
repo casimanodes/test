@@ -73,5 +73,4 @@ const removeStyle = () =>{
        })
    }
 }
-
 addEventListener('resize', removeStyle)

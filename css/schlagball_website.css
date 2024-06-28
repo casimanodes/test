@@ -55,7 +55,7 @@ main {
 /* height: 100vh;
 width: 100%; */
 padding: 0;
-padding-top: 3.5rem;
+/* padding-top: 3.5rem; */
 margin: 0;
 transition: padding 0.5s ease, border-radius 0.5s ease;
 border-radius: 0;
@@ -71,7 +71,7 @@ position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../bilder/cassio_wurf.jpg");
+  background-image: url("../../schlagball-react/src/components/images/cassio_wurf.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -95,7 +95,7 @@ main img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: blurr(5px) ;
+  filter: blur(5px) ;
   transition: height 0.7s ease, width 0.7s ease;
   z-index: 1;
 }
@@ -103,13 +103,15 @@ main img {
 .relative_container{
   position: relative;
   width: 100%;
-  height: calc(100svh - 3.5rem);
+  height: 100svh;
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
+  padding: 0;
+  margin: 0;
 }
 .main_title{
-  margin-top: 0.25rem;
+  margin-top: 3.75rem;
   position: relative;
   top: 0%;
   color: #fff;
@@ -120,7 +122,6 @@ main img {
     /* --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1); */
   width: 100%;
   text-align: center;
-  margin: 0;
   z-index: var(--z-index-top-ebene);
 }
 .inline{
@@ -228,24 +229,23 @@ transition: height 0.7s ease-in-out, opacity 0.7s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: relative; 
   top: 0rem;
-  left: 50%;
-  transform: translate(-50%);
+  align-self: center;
+  /* left: 50%;
+  transform: translateX(-50%); */
   z-index: var(--z-index-top-ebene);
-  width: 75%;
   height: 3rem;
   transition: all 0.7s ease-in-out;
-  margin: 0 0 0.25rem 0.25rem;
-  /* padding: 0.5rem; */
-
+  margin: 0 0 0.25rem 0rem;
+  /* width: 18rem; */
   background:
   linear-gradient(45deg, rgb(255, 0, 0)0%, rgb(231, 103, 18)100%) border-box;
   border-radius: 0.5rem;
   border: solid 3px transparent;
   background-clip:  border-box;
   color: white;
-  padding: 0.5rem;
+  padding: 0rem 1rem 0 1rem;
   font-size: 1.75rem;
   font-weight: 700;
 }
@@ -354,23 +354,21 @@ top: 0;
 left: 0;
 }
 
-a.whatIs{
+.whatIs{
 position: absolute;
 display: flex;
 justify-content: center;
-align-items: center;  
+align-items: center;
+align-self: center;  
 flex-direction: column;
-/* flex-direction: column; */
-bottom: 0%;
-/* left: 25%; */
-transform: translate(-50%);
-height: auto;
+height: 4rem;
 width: 100%;
+bottom: 0rem;
 margin: 0;
 /* background: linear-gradient(to top, white, rgba(255, 255, 255, 0.3)); */
 /* background-color: rgb(255, 255, 255, 0.5); */
-animation: bounce 2s infinite;
-text-align: center;
+animation: bounce 3s infinite;
+
 }
 
 .whatIs p{
@@ -459,27 +457,38 @@ svg.chatbot_svg{
   align-items: center;
   justify-content: center;
 }
-
+.chatbotTitle{
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  align-content: center;
+  padding: 0.25rem;
+  height: 3rem;
+}
 
 
 
 /* CHATBOT answers/texts */
 .chatbotText{
-  max-height:calc(100% - 4rem);
+  max-height:calc(100% - 6rem);
   width: calc(100% - 1rem);
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: auto;
   top: 0.5rem;
-  border: 5%;
   overflow-y: scroll;
   display: block;
   display: flex;
   visibility: hidden;
   flex-direction: column;
+  padding-bottom: 0.25rem;
 }
 
 .input_send{
+
   margin-right: calc(0.25rem + 0.125rem);
   margin-bottom:0.125rem;
   margin-left:0.125rem;
@@ -493,6 +502,7 @@ svg.chatbot_svg{
 }
 
 #chatInput[type="text"] {
+
   display: none;
   position: absolute;
   bottom: 0;
@@ -503,7 +513,7 @@ svg.chatbot_svg{
   border-bottom-left-radius:0.5rem;
   border-bottom-right-radius:0.5rem;
   z-index: var(--z-index-middle-ebene);
-  border:none;
+
 }
 
 .input_send #send{
@@ -514,11 +524,14 @@ svg.chatbot_svg{
 }
 
 .message{
-  margin: 0.5rem;
-  padding: 0.25rem;
+  margin: 0.25rem;
+  padding: 0.325rem;
   font-size: 1.125rem;
   font-weight: 500;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
+  overflow-wrap: break-word; /* Ensures long words break to the next line */
+  white-space: pre-wrap; 
+
 }
 
 .user-message {
@@ -597,3 +610,76 @@ footer {
   font-size: 14px;
   color: #fff;
 }
+
+
+/* ANIMATION/TRANSITION */
+
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+  transform: translateX(-100%);
+}
+
+.show{
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0px);
+}
+.main_title > :nth-child(2){
+  transition-delay: 200ms;
+}
+.relative_container > :nth-child(2) {
+    transition-delay: 500ms;
+}
+.trainingszeiten{
+  transition-delay: 1000ms;
+}
+.whatIs{
+ transition-delay: 800ms; 
+}
+
+
+@keyframes pulse {
+  0% {
+      opacity: 0;
+      transform: scale(0.9);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(0.9);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+
+@media all and (min-width: 1118px) {
+  .social_media{
+    display: none;
+  }
+  .main_title{
+    margin-top: 5.75rem;
+  }
+  h1{
+    font-size: 5rem;
+  }
+  h2{
+    font-size: 4rem;
+  }
+  .whatIs{
+    bottom: 0rem;
+  }
+  .expanded{
+    width: 27.5%;
+  }
+}  

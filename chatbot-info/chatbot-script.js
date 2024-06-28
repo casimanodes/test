@@ -1,23 +1,16 @@
 document.getElementById('chatInput').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter' || send()) {
-        alert("Antworten kommen später. Das ganze muss erst auf server hochgeladne und verknüpft werden.")
+    if (e.key === 'Enter') {
         sendMessage();
-        pos_spinner.style.display = "block";
-
+        document.querySelector('.pos_spinner').style.display = "block";
     }
 });
 
-function send(){
-const sendButton = document.getElementById('send');
-sendButton.addEventListener('click', function() {
+document.getElementById('send').addEventListener('click', function() {
     sendMessage();
-    pos_spinner.style.display = "block";
+    document.querySelector('.pos_spinner').style.display = "block";
 
 });
-}
 
-
-// funktoin um nachrichten im chatbot zu zeigen
 function displayMessage(message, className) {
     const chatbotText = document.querySelector('.chatbotText');
     const messageElement = document.createElement('div');
@@ -27,18 +20,15 @@ function displayMessage(message, className) {
     chatbotText.scrollTop = chatbotText.scrollHeight;
 }
 
-
-// Funktion um Nachrichten zu senden
 function sendMessage() {
     const chatInput = document.getElementById('chatInput');
     const userMessage = chatInput.value;
     if (userMessage.trim() === '') return;
 
-    // Display user's message
     displayMessage(userMessage, 'user-message');
     chatInput.value = '';
 
-    // Send the message to the server
+
     fetch('http://localhost:3000/chatbot', {
         method: 'POST',
         headers: {
@@ -46,35 +36,21 @@ function sendMessage() {
         },
         body: JSON.stringify({ message: userMessage })
     })
-    // say if an error happend 
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        displayMessage(data.message, 'bot-message');
+        document.querySelector('.pos_spinner').style.display = "none";
+
+    })
     .catch(error => {
         console.error('Error:', error);
         displayMessage('Error: Could not retrieve the response.', 'bot-message');
-
-        pos_spinner.style.display = "";
+    document.querySelector('.pos_spinner').style.display = "none";
+    
     });
 }
-
-
-
-// Funktion um Nachrichten zu empfangen
-const data = { message: 'Hallo' };
-function fetchData() {
-    fetch('http://localhost:3000/retrieve-message')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            displayMessage(data.message, 'bot-message');
-            pos_spinner.style.display = "";
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-}
-
-
-// muss noch angepasst werden sodass die funktion ausgeführt wird wenn die nachricht gesendet wird
-// triggert das nachrichten posten 
- document.querySelector('.chatbot').addEventListener('click', function() {
-        fetchData();
- });

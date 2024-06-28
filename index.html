@@ -6,17 +6,22 @@
     
     <title>Schlagball</title>
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/schlagball_website.css">
     <link rel="stylesheet" type="text/css" href="css/schlagball_dropdown.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-down-o.css' rel='stylesheet'>
+    <script defer src="js/schlagball.js"></script>
+    <script defer src="js/dropdown.js"></script>
+    <script defer src="js/trainingszeiten.js"></script>
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="chatbot-info\chatbot-script.js"></script>
   </head>
 <body>
   <header>
 
-    <nav class="nav container">
+    <nav class="nav">
         <div class="nav__data">
                 <div class="nav__logo">
                   <a href="#">Logo</a>
@@ -192,8 +197,8 @@
     <div class="relative_container">
 
         <div class="main_title">
-              <h2>Schlagball Verein</h2>
-              <h1> Winterhude</h1>
+              <h2 class="hidden">Schlagball Verein</h2>
+              <h1 class="hidden"> Winterhude</h1>
         </div>
 
 
@@ -201,7 +206,7 @@
             Mitglied werden
         </a>
 
-        <div class="trainingszeiten">
+        <div class="trainingszeiten hidden">
           <h4>Trainingszeiten</h4>
             <ul>
               <li>
@@ -223,7 +228,7 @@
             </ul>
         </div>
 
-        <a href="#wasistschlagball" class="whatIs">
+        <a href="#wasistschlagball" class="whatIs hidden">
           <p>Was ist eigentlich Schlagball?</p>
           <svg 
           class="arrow_down"
@@ -244,7 +249,7 @@
             fill="currentColor"
           />
         </svg>
-    </a>
+        </a>
 
     </div>
     </main>
@@ -274,9 +279,13 @@
               fill="currentColor"
             />
         </svg>
-        
+        <div class="chatbotTitle">
+           <h3> Chatbot - GPT 4</h3>
+        </div>
              <div class="chatbotText">
-
+                <div class="pos_spinner">
+                    <div class="spinner"></div>
+                </div>
              </div>
          <div class="input_send">
              <input type="text" id="chatInput" placeholder="Frage gerne nach...">
@@ -303,17 +312,15 @@
   />
     </svg>
 
-     <div class="pos_spinner">
-        <div class="spinner"></div>
-    </div>
+
 
 
     <div class="second_vh" id="wasistschlagball">
-      <h2>Der Kreativste Sport der Welt</h2>
+      <h2 class="hidden">Der Kreativste Sport der Welt</h2>
       <div class="werbeVid">
         <video src="videos/schlagball.mp4" controls></video>
       </div>
-      <img src="bilder/spielfeld-lg.jpg" alt="spielfeld">
+      <img src="../schlagball-react/src/components/images/spielfeld-lg.jpg" alt="spielfeld">
       <p><h4>Schlagball</h4> kombiniert Elemente aus Baseball, Brennball und Völkerball. Zwei Teams 
         wechseln sich im Schlagrecht ab. Die Spieler des schlagenden Teams schlagen den Ball ins
          Spielfeld und laufen durch das Feld zu einem Mal und zurück, um Punkte zu sammeln. Das andere 
@@ -337,11 +344,7 @@
         </div>
     </div>
 </footer>
-<script src="js/schlagball.js"></script>
-<script src="js/dropdown.js"></script>
-<script src="js/trainingszeiten.js"></script>
-<script src="js/chatbot.js"></script>
-<script src="chatbot-info\chatbot-script.js"></script>
+
 </html>
 
 

@@ -11,9 +11,9 @@ window.addEventListener('scroll', function() {
       img_overlay.style.borderRadius = '1rem';
       imgSizeChanged = true;
 
-      mitglied.style.bottom = 'calc(0% - 4rem)';
-      mitglied.style.left= 'calc(50% + 0.25rem)';
-      mitglied.style.transform = 'translateX(-50%)';
+      // mitglied.style.bottom = 'calc(0% - 4rem)';
+      // mitglied.style.left= 'calc(50% + 0.25rem)';
+      // mitglied.style.transform = 'translateX(-50%)';
 
 
     }
@@ -24,17 +24,26 @@ window.addEventListener('scroll', function() {
       img.style.borderRadius = '';
       img_overlay.style.borderRadius = '';
       imgSizeChanged = false;
-      mitglied.style.bottom= '';
-      mitglied.style.left= '';
-      mitglied.style.transform= '';
+      // mitglied.style.bottom= '';
+      // mitglied.style.left= '';
+      // mitglied.style.transform= '';
 
     }
   }
 });
 
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } 
+    // else {
+    //   entry.target.classList.remove('show');
+    // }
+  });
+});
 
-
-
-
-
+const hiddenElements = document.querySelectorAll('.hidden')
+hiddenElements.forEach((el) => observer.observe(el));

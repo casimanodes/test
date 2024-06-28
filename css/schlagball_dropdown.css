@@ -72,12 +72,13 @@ header {
   /* z-index: var(--z-fixed); */
   z-index: 999;
   transition: var(--background-color-transition);
-  backdrop-filter: blur(100px);
+  filter: blur(0px);
 }
 
 /*=============== NAV ===============*/
 .nav {
   height: var(--header-height);
+  padding: 0 2% 0 2%;
 }
 .nav__data {
   height: 100%;
