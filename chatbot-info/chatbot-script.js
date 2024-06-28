@@ -83,7 +83,7 @@ function sendMessage() {
     displayMessage(userMessage, 'user-message');
     chatInput.value = '';
 
-    fetch('/api/chatbot', {
+    fetch('/api/server', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

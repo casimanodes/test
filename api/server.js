@@ -81,7 +81,7 @@ app.get('/api', (req, res) => {
 });
 
 // Endpoint to handle incoming messages from the chatbot
-app.post('/api/chatbot', async (req, res) => {
+app.post('/api/server', async (req, res) => {
     const userMessage = req.body.message;
     console.log(userMessage);
 
