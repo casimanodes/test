@@ -62,27 +62,22 @@
 //     console.log(`Server running at http://localhost:${port}`);
 // });
 
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const axios = require('axios');
 
-// Laden der Umgebungsvariablen nur im Entwicklungsmodus
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
-
+// Create express app
 const app = express();
-
-let responseMessage = 'Test version, tatsächliche daten kommen noch';
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 app.use(cors());
 
+let responseMessage = 'Test version, tatsächliche daten kommen noch';
+
 // Basic route to confirm server is running
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.send('Server is running');
 });
 
@@ -123,4 +118,5 @@ app.get('/api/retrieve-message', (req, res) => {
     res.json({ message: responseMessage });
 });
 
+// Export the app as a Vercel serverless function
 module.exports = app;
