@@ -3,3 +3,4 @@
 /chatbot-info/package-lock.json
 /chatbot-info/package.json
 .hintrc
+node_modules
