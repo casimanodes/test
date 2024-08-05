@@ -5,3 +5,4 @@
 .hintrc
 node_modules
 vercel.json
+/database 

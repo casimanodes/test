@@ -17,7 +17,9 @@
     <script defer src="js/trainingszeiten.js"></script>
     <script defer src="js/chatbot.js"></script>
     <script defer src="chatbot-info\chatbot-script.js"></script>
-    
+    <script defer src="chatbot-info\employee.js"></script>
+    <script defer src="chatbot-info\from_employee.js"></script>
+
   </head>
 <body>
   <header>
@@ -303,26 +305,82 @@
         />
             </svg>
         </div>
+        <div class="chatbotTitle">
+            <div class="swym_logo"></div>
+            <h3 id="titleOfChatbot"> Swym Chatbot </h3>
+        </div>
+        
 
-        <div class="chatbotContainer">
-            <div class="chatbotTitle">
-                <h3> Chatbot - GPT 4</h3>
+        <div class="chatbot_seiten_container">
+            <div class="menü_contianer">
+
+                <div class="chatbotText_menü">
+                    <div class="systhem_nachricht">
+                        <p>Menü</p>
+                    </div>
+                        <div class="pos_spinner">
+                            <div class="spinner"></div>
+                        </div>
+                </div>
+                <div class="input_send">
+                    <input type="text" class="from_mitarbeiter_chatInput" placeholder="antworten MitarbeiterInnen...">
+                    <button class="from_mitarbeiter_message_send">Senden</button>
+                </div>
             </div>
 
+            <!-- CHATBOT ANSWERS HERE IN THIS CONTAINER  -->
+            <div class="chatbot_answer_contianer">
+                <div class="chatbotText_bot">
+                    <div class="systhem_nachricht">
+                        <p>CHATBOOOOT</p>
+                    </div>
+                        <div class="pos_spinner">
+                            <div class="spinner"></div>
+                        </div>
+                </div>
 
-            <div class="chatbotText">
+                <div class="input_send">
+                    <input type="text" class="chatInput" id="testtest" placeholder="Frag unseren Chatbot...">
+                    <button class="message_send">Senden</button>
+                </div>
+            </div>
+
+            <!-- MITARBEITER CONTAINER  -->
+            <div class="mitarbeiter_answer_contianer">
+
+                <div class="chatbotText_mitarbeiter">
+                    <div class="systhem_nachricht">
+                        <p>mitarbeiter seite</p>
+                    </div>
                     <div class="pos_spinner">
                         <div class="spinner"></div>
                     </div>
-            </div>
 
-            <div class="input_send">
-                <input type="text" id="chatInput" placeholder="Frage gerne nach...">
-                <button id="send">Senden</button>
+                </div>
 
+                <div class="input_send">
+                    <input type="text" class="mitarbeiter_chatInput" placeholder="Frag unsere MitarbeiterInnen...">
+                    <button class="mitarbeiter_message_send">Senden</button>
+                </div>
             </div>
         </div>
 
+        <div class="chatbot_menü_container">
+            <ul class="chatbot_menü">
+                <li class="to_the_menü">
+                    <p>s</p>
+                    <p>Menü</p>
+                </li>
+                <li class="to_the_chatbot">
+                    <p>v</p>
+                    <p>Chatbot</p>
+                </li>
+                <li class="to_the_mitarbeiter">
+                    <p>g</p>
+                    <p>Live</p>
+                </li>
+            </ul>
+        </div>
     </div>
 
 
