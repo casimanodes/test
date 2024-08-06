@@ -115,6 +115,7 @@
 
 // AKTUELLSTER CODE: 19.07
 
+console.log("chatbot new");
 
 document.querySelector('.chatInput').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
@@ -147,7 +148,7 @@ function sendMessage() {
     // Show spinner
     document.querySelector('.pos_spinner').style.display = "block";
 
-    fetch('http://localhost:3000/api/server', {
+    fetch('/api/server', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
