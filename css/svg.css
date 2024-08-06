@@ -1,0 +1,262 @@
+
+
+/* ALL THE SVG  */
+/* FIRST  */
+.gg-chevron-right-r {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 4px
+}
+.gg-chevron-right-r::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(-45deg);
+  left: 5px;
+  top: 6px
+}
+
+/* SECOND  */
+.gg-arrow-top-right-r {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  transform: scale(var(--ggs,1));
+  border-radius: 4px
+}
+.gg-arrow-top-right-r::after,
+.gg-arrow-top-right-r::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  right: 4px
+}
+.gg-arrow-top-right-r::after {
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  bottom: 8px
+}
+.gg-arrow-top-right-r::before {
+  width: 6px;
+  height: 6px;
+  top: 4px;
+  border-top: 2px solid;
+  border-right: 2px solid
+}
+/* BOT SVG THIRD  */
+
+.gg-bot {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 21px;
+  height: 10px;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-radius: 12px;
+  box-shadow:
+      0 0 0 2px,
+      -4px 0 0 -1px,
+      4px 0 0 -1px,
+      inset 0 -4px 0 -2px;
+
+}
+.gg-bot::after,
+.gg-bot::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  box-shadow: 0 0 0 2px;
+  top: 3px;
+
+}
+.gg-bot::before {
+  left: -4px;
+  border-radius: 3px
+}
+.gg-bot::after {
+  border-radius: 100px;
+  right: -4px
+}
+
+/* CLOSE SVG  */
+.gg-close-o {
+  box-sizing: border-box;
+  position: relative;
+  display: none;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 40px;
+
+}
+.gg-close-o::after,
+.gg-close-o::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  top: 8px;
+  left: 3px
+}
+.gg-close-o::after {
+  transform: rotate(-45deg)
+}
+
+
+/* ARROW RIGHT SVG   */
+.gg-arrow-right-o {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 20px;
+}
+.gg-arrow-right-o::after,
+.gg-arrow-right-o::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 4px
+}
+.gg-arrow-right-o::after {
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    bottom: 6px
+}
+.gg-arrow-right-o::before {
+    width: 10px;
+    height: 2px;
+    bottom: 8px;
+    background: currentColor
+}
+
+
+/* HOME 
+ */
+ .gg-home {
+    background:
+        linear-gradient(to left,
+            currentColor 5px,transparent 0)
+            no-repeat 0 bottom/4px 2px,
+        linear-gradient(to left,
+            currentColor 5px,transparent 0)
+            no-repeat right bottom/4px 2px;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 18px;
+    height: 14px;
+    border: 2px solid;
+    border-top: 0;
+    border-bottom: 0;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-bottom: -2px
+  }
+  .gg-home::after,
+  .gg-home::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+  }
+  .gg-home::before {
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-top-left-radius: 4px;
+    transform: rotate(45deg);
+    top: -5px;
+    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+    left: 0
+  }
+  .gg-home::after {
+    width: 8px;
+    height: 10px;
+    border: 2px solid;
+    border-radius: 100px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+    left: 3px;
+    bottom: 0
+  }
+
+
+
+  /* MEssage SVG */
+  .gg-comment {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 16px;
+    border: 2px solid;
+    border-bottom: 0;
+    box-shadow:
+        -6px 8px 0 -6px,
+        6px 8px 0 -6px
+}
+.gg-comment::after,
+.gg-comment::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px
+}
+.gg-comment::before {
+    border: 2px solid;
+    border-top-color: transparent;
+    border-bottom-left-radius: 20px;
+    right: 4px;
+    bottom: -6px;
+    height: 6px
+}
+.gg-comment::after {
+    height: 2px;
+    background: currentColor;
+    box-shadow: 0 4px 0 0;
+    left: 4px;
+    top: 4px
+}

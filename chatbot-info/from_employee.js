@@ -17,6 +17,8 @@ function displayMessage_from_mitarbeiter(message, className) {
     // Iterate through each selected element
     chatbotTextContainers.forEach(chatbotText => {
         // Create the message element
+
+
         const messageElement = document.createElement('div');
         messageElement.className = `message ${className}`;
         messageElement.textContent = message;

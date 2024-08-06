@@ -1,7 +1,8 @@
 /chatbot-info/node_modules
-/chatbot-info/.env
+# /chatbot-info/.env
 /chatbot-info/package-lock.json
 /chatbot-info/package.json
+/chatbot-info/ngrok.yml
 .hintrc
 node_modules
 vercel.json
