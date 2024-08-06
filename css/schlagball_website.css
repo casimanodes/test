@@ -448,7 +448,7 @@ color: #fff;
 
 /* unterseiten container  */
 .chatbot_seiten_container{
-  display: none;
+  display: flex;
   height: 100%;
   width: 100%;
   flex-direction: column;
@@ -484,7 +484,7 @@ color: #fff;
 }
 
 .actual_menü{
-  display: none;
+  display: block;
   height: 100%;
   max-height: calc(100vh - 6.75rem);
   width: 100%;
@@ -668,7 +668,7 @@ padding-bottom: 0;
 
 /* THE MENÜ  */
 .chatbot_menü_container{
-  display: none;
+  display: flex;
   align-self: flex-end;
   top: 100%;
   color: black;

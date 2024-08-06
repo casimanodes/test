@@ -40,13 +40,13 @@ const mitarbeiter_answer_contianer = document.querySelector(".mitarbeiter_answer
 // OPEN THE CHATBOT 
 document.querySelector('.chatbot_icons').addEventListener('click', function() {
   if(!chatbot_opened){
-    open_chatbot.classList.add('expanded');
+    // open_chatbot.classList.add('expanded');
     
-    actual_menü.style.display = "block";
+    // actual_menü.style.display = "block";
     
     // body.style.overflow = "hidden";
-    chatbot_seiten_container.style.display = "flex";
-    chatbot_menü_container.style.display = "block";
+    // chatbot_seiten_container.style.display = "flex";
+    // chatbot_menü_container.style.display = "block";
 
     svg_open_chatbot.style.transform ='rotate(180deg)'
     svg_open_chatbot.style.pointerEvents = "none";
@@ -73,15 +73,15 @@ document.querySelector('.chatbot_icons').addEventListener('click', function() {
     chatbot_opened = true;
   } else {
     // chatbot schließen
-    open_chatbot.classList.remove('expanded');
+    // open_chatbot.classList.remove('expanded');
     // body.style.overflow  = "auto";
 
 
-    chatbot_seiten_container.style.display = "";
-    chatbot_menü_container.style.display = "";
+    // chatbot_seiten_container.style.display = "";
+    // chatbot_menü_container.style.display = "";
 
     mitarbeiter_antwort_container.style.display = ""
-    actual_menü.style.display = "";
+    // actual_menü.style.display = "";
     chatbot_answer_contianer.style.display = ""
     mitarbeiter_answer_contianer.style.display = ""
 
@@ -107,7 +107,7 @@ employee_acces.addEventListener('click', function(){
   // titleOfChatbot.innerHTML = "Mitarbeier Antwort"
 
   mitarbeiter_antwort_container.style.display = "flex"
-  actual_menü.style.display = "";
+  actual_menü.style.display = "none";
   chatbot_answer_contianer.style.display = ""
   mitarbeiter_answer_contianer.style.display = ""
 });
@@ -131,7 +131,7 @@ chatbot.forEach(chatbot => {
 
     // titleOfChatbot.innerHTML = "Chatbot Swym"
     mitarbeiter_antwort_container.style.display = ""
-    actual_menü.style.display = "";
+    actual_menü.style.display = "none";
     chatbot_answer_contianer.style.display = "flex"
     mitarbeiter_answer_contianer.style.display = ""
   });
@@ -142,7 +142,7 @@ mitarbeiter.addEventListener('click', function(){
 
   // titleOfChatbot.innerHTML = "Mitarbeiter Chat"
   mitarbeiter_antwort_container.style.display = ""
-  actual_menü.style.display = "";
+  actual_menü.style.display = "none";
   chatbot_answer_contianer.style.display = ""
   mitarbeiter_answer_contianer.style.display = "flex"
 });
